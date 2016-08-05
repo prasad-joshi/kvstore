@@ -129,3 +129,10 @@ int blob_copy_to_memory(blob_t *bp, void *memory, uint32_t memsize)
 	memcpy(memory, &bp->blobsize, sizeof(bp->blobsize) + bp->blobsize);
 	return 0;
 }
+
+void blob_get_pointer(blob_t *bp, void **dpp, uint32_t *dsp)
+{
+	assert(bp && dpp && dsp);
+	*dpp = bp->blob;
+	*dsp = bp->blobsize;
+}

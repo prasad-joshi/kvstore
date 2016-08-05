@@ -16,6 +16,7 @@ int  blob_new(void *blobdata, uint32_t size, blob_t **bpp);
 int  blob_dup(blob_t *bsp, blob_t **bdpp);
 int  blob_copy_to_memory(blob_t *bp, void *memory, uint32_t memsize);
 void blob_free(blob_t *bp);
+void blob_get_pointer(blob_t *bp, void **dpp, uint32_t *dsp);
 
 uint32_t blob_size(blob_t *bp);
 uint32_t blob_memory_size(blob_t *bp);
